@@ -1,15 +1,15 @@
 # Competition Manager
 
 ## Installation Guide:
-  - git clone https://github.com/acelbeton/laravelbeadando.git
-  - cd laravelbeadando/competition-manager
-  - composer install
-  - npm install
-  - cp .env.example .env
-  - php artisan key:generate
-  - php artisan migrate --seed
-  - npm run dev
-  - php artisan serve
+  1. git clone https://github.com/acelbeton/laravelbeadando.git
+  1. cd competition-manager
+  1. composer install
+  1. npm install
+  1. cp .env.example .env
+  1. php artisan key:generate
+  1. php artisan migrate --seed
+  1. npm run dev
+  1. php artisan serve
 ## Seeders
   - Added some dummy data to the tables
 ## Competitor
