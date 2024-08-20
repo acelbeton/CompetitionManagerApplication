@@ -2,7 +2,7 @@
 
 ## Installation Guide:
   1. git clone https://github.com/acelbeton/CompetitionManagerApplication.git
-  1. cd competition-manager
+  1. cd CompetitionManagerApplication/competition-manager
   1. composer install
   1. npm install
   1. cp .env.example .env
