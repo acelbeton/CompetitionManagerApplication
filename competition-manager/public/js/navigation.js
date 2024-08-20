@@ -54,6 +54,7 @@ $(document).ready(function() {
                         $(listId).html(response.html);
                         $(modalId).modal('hide');
                         $form[0].reset();
+                        $('#message').empty();
                         reinitializeEventListeners();
                     }
                     if (response.usersDropdown) {
@@ -61,12 +62,11 @@ $(document).ready(function() {
                     }
                 },
                 error: function(xhr) {
-                    let errors = xhr.responseJSON.errors;
-                    let errorString = '';
-                    $.each(errors, function(key, value) {
-                        errorString += value[0] + '\n';
-                    });
-                    alert(errorString);
+                    let errorMessage = 'There was an error';
+                    if (xhr.responseJSON && xhr.responseJSON.error) {
+                        errorMessage = xhr.responseJSON.error;
+                    }
+                    $('#message').html('<div class="alert alert-danger">' + errorMessage + '</div>')
                 }
             });
         });
@@ -128,7 +128,7 @@ $(document).ready(function() {
                 error: function(xhr) {
                     let errorMessage = 'There was an error';
 
-                    if (xhr.status === 409) { // Handle duplicate entry
+                    if (xhr.status === 409) {
                         errorMessage = xhr.responseJSON.errors.competition;
                     } else if (xhr.responseJSON && xhr.responseJSON.message) {
                         errorMessage = xhr.responseJSON.message;

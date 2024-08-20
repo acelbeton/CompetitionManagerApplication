@@ -33,6 +33,7 @@
                             <label for="date">Date</label>
                             <input type="date" class="form-control" id="date" name="date" required>
                         </div>
+                        <div id="message"></div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

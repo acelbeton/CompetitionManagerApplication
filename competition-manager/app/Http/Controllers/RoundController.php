@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Competition;
 use App\Models\Competitor;
 use App\Models\Round;
 use Illuminate\Http\Request;
@@ -43,6 +44,17 @@ class RoundController extends Controller
 
         if ($validator->fails()) {
             return response()->json(['errors' => $validator->errors()], 422);
+        }
+
+        $competition = Competition::find($request->input('competition_id'));
+
+        if (!$competition) {
+            return response()->json(['error' => 'Competition not found'], 404);
+        }
+
+        $roundYear = date('Y', strtotime($request->input('date')));
+        if ($roundYear != $competition->competition_year) {
+            return response()->json(['error' => 'The round year must match the competition year (' . $competition->competition_year . ')'], 422);
         }
 
         $round = new Round();
