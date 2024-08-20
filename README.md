@@ -13,7 +13,7 @@
 ## Seeders
   - Added some dummy data to the tables
 ## Competitor
-  - Only from existing users you can add competitors to the selected rounds
+  - Only existing Users can be added to the selected Round as Competitors
 ## Date Handling
   - Competition year is unique
-  - Round year must be the same as it's Competition year
+  - Round year must be the same as its Competition year
