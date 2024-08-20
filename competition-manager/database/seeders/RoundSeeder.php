@@ -18,13 +18,13 @@ class RoundSeeder extends Seeder
                 'competition_id' => 1,
                 'round_number' => 1,
                 'location' => 'New York',
-                'date' => '2024-05-01',
+                'date' => '2025-05-01',
             ],
             [
                 'competition_id' => 1,
                 'round_number' => 2,
                 'location' => 'Los Angeles',
-                'date' => '2024-06-01',
+                'date' => '2025-06-01',
             ],
             [
                 'competition_id' => 2,
