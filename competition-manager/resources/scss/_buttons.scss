@@ -1,0 +1,32 @@
+@import 'variables';
+@import 'mixins';
+
+.btn {
+    &-primary {
+        @include button(#fff, $primary-color);
+    }
+    &-danger {
+        @include button(#fff, $danger-color);
+    }
+    &-success {
+        @include button(#fff, $success-color);
+    }
+}
+button {
+    padding: 12px;
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: darken($primary-color, 10%);
+    }
+
+    @include respond-to(small) {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+

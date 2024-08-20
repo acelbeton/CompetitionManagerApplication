@@ -1,0 +1,67 @@
+@import 'variables';
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th, td {
+        padding: 1.5em;
+        border: 1px solid $table-border-color;
+        text-align: left;
+        font-size: 1.1em;
+    }
+
+    th {
+        background-color: $secondary-color;
+        color: #fff;
+        font-size: 1.2em;
+    }
+
+    tbody tr:nth-child(odd) {
+        background-color: #f9f9f9;
+    }
+
+    @media screen and (max-width: 768px) {
+        thead {
+            display: none;
+        }
+
+        tbody, tr {
+            display: block;
+            width: 100%;
+        }
+
+        tr {
+            margin-bottom: 1em;
+            border: 1px solid $table-border-color;
+        }
+
+        td {
+            display: flex;
+            justify-content: space-between;
+            padding: 1em;
+            font-size: 1em;
+            position: relative;
+            text-align: left;
+        }
+
+        td::before {
+            content: attr(data-label);
+            font-weight: bold;
+            margin-right: 1em;
+            color: $secondary-color;
+            display: inline-block;
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        th, td {
+            padding: 2em;
+            font-size: 1.2em;
+        }
+
+        th {
+            font-size: 1.3em;
+        }
+    }
+}

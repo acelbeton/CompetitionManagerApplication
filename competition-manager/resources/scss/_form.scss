@@ -1,0 +1,49 @@
+@import 'variables';
+@import 'mixins';
+
+.form-group {
+    margin-bottom: 1em;
+    label {
+        display: block;
+        margin-bottom: 0.5em;
+    }
+    input {
+        width: 100%;
+        padding: 0.5em;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+}
+
+.input-group {
+    display: flex;
+    .form-control {
+        flex: 1;
+    }
+    .input-group-append {
+        .btn {
+            margin-left: -1px;
+        }
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    input, select, textarea {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+
+        @include respond-to(small) {
+            font-size: 14px;
+        }
+    }
+
+    button {
+        @include font-size(16px);
+    }
+}
