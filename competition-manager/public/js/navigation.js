@@ -34,7 +34,6 @@ $(document).ready(function() {
         handleFormSubmission('#addCompetitorForm', '#addCompetitorModal', '#competitorsList');
         handleDeletion('.delete-competitor', '/competitors/destroy', '#competitorsList', '#usersDropdownContainer');
 
-        console.log("Event listeners reinitialized");
     }
 
     function handleFormSubmission(formId, modalId, listId) {
@@ -168,7 +167,6 @@ $(document).ready(function() {
         event.preventDefault();
         const $element = $(this);
         const url = $element.is('a.ajax-link') ? $element.attr('href') : $element.attr('action');
-        console.log('Navigating to:', url);
         loadContent(url);
     }
 
