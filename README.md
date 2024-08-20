@@ -1,7 +1,7 @@
 # Competition Manager
 
 ## Installation Guide:
-  1. git clone https://github.com/acelbeton/laravelbeadando.git
+  1. git clone https://github.com/acelbeton/CompetitionManagerApplication.git
   1. cd competition-manager
   1. composer install
   1. npm install
